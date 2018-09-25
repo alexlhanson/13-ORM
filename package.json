@@ -4,7 +4,13 @@
   "description": "Express server with MongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "watch": "nodemon index.js",
+    "debug": "DEBUG=express:router nodemon index.js",
+    "test": "jest --watchAll"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
   },
   "repository": {
     "type": "git",
@@ -25,7 +31,8 @@
     "express": "^4.16.3",
     "mongoose": "^5.2.17",
     "morgan": "^1.9.1",
-    "require-dir": "^1.0.0"
+    "require-dir": "^1.0.0",
+    "superagent": "^4.0.0-beta.5"
   },
   "devDependencies": {
     "debug": "^4.0.1",
