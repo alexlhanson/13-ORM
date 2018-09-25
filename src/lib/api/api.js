@@ -7,7 +7,10 @@ import modelFinder from '../middleware/models';
 router.param('model', modelFinder);
 
 router.post('/api/v1/:model', (res, req, next) => {
-  res.status(200).end();
+  let record = new req.model(req.body);
+  record.save()
+    .then(data => res.status(200).json(data).end())
+    .catch(next);
 });
 
 router.get('/api/v1/:model/:id', (res, req, next) => {

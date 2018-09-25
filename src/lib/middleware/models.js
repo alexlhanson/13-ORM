@@ -1,6 +1,6 @@
 'use strict';
 
-const requireAll = require('require-dir');
+import requireAll from 'require-dir';
 const models = requireAll('../models/');
 
 let modelFinder = (req, res, next) => {
