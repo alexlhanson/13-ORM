@@ -8,7 +8,7 @@ require('babel-register')({
 });
 
 //setup mongo database
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 
 //start express server

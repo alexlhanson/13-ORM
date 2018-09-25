@@ -6,19 +6,19 @@ const router = express.Router();
 import modelFinder from '../middleware/models';
 router.param('model', modelFinder);
 
-router.post('/api/v1/model', (res, req, next) => {
+router.post('/api/v1/:model', (res, req, next) => {
   res.status(200).end();
 });
 
-router.get('/api/v1/model/:id', (res, req, next) => {
+router.get('/api/v1/:model/:id', (res, req, next) => {
   res.status(200).end();
 });
 
-router.delete('/api/v1/model/:id', (res, req, next) => {
+router.delete('/api/v1/:model/:id', (res, req, next) => {
   res.status(200).end();
 });
 
-router.put('/api/v1/model/:id', (res, req, next) => {
+router.put('/api/v1/:model/:id', (res, req, next) => {
   res.status(200).end();
 });
 
