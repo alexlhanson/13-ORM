@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 //endpoint middleware imports
-import router from '.lib/api/api';
+import router from './lib/api/api';
 // import badRequest from '.lib/middleware/bad-request';
 // import errHandler from '.lib/middleware/err-handler';
 
