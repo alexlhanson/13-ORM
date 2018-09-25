@@ -5,12 +5,15 @@ import app from '../../../../src/app';
 
 describe('api CRUD responses', () => {
 
+  const basePath = 'http://localhost:3000/api/v1/books';
   const PORT = 3000;
+  let server;
+
   beforeAll(() => {
-    app.listen(PORT);
+    server = app.listen(PORT);
   });
   afterAll(() =>{ 
-    app.close();
+    server.close();
   });
 
   test('post request responds with 200 status', () => {

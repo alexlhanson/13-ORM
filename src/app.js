@@ -7,6 +7,7 @@ import cors from 'cors';
 let app = express();
 
 //middleware chain
+console.log('in app');
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
@@ -18,6 +19,7 @@ import errHandler from './lib/middleware/err-handler';
 
 //enpoint middleware use
 app.use(router);
+console.log('endpoints');
 app.use(errHandler);
 
 //ES5 export due to compatibility issues
