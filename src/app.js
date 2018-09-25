@@ -14,13 +14,11 @@ app.use(express.urlencoded({extended:true}));
 
 //endpoint middleware imports
 import router from './lib/api/api';
-// import badRequest from '.lib/middleware/bad-request';
-// import errHandler from '.lib/middleware/err-handler';
+import errHandler from './lib/middleware/err-handler';
 
 //enpoint middleware use
 app.use(router);
-// app.use(badRequest);
-// app.use(errHandler);
+app.use(errHandler);
 
 //ES5 export due to compatibility issues
 module.exports = app;
