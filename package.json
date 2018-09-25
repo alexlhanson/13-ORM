@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/alexlhanson/13-ORM.git"
   },
-  "author": "Alex Hanson",
+  "author": "Alex Hanson <alexlhanson@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alexlhanson/13-ORM/issues"
