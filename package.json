@@ -1,0 +1,22 @@
+{
+  "name": "13-orm",
+  "version": "1.0.0",
+  "description": "Express server with MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlhanson/13-ORM.git"
+  },
+  "author": "Alex Hanson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexlhanson/13-ORM/issues"
+  },
+  "homepage": "https://github.com/alexlhanson/13-ORM#readme",
+  "dependencies": {
+    "mongoose": "^5.2.17"
+  }
+}
