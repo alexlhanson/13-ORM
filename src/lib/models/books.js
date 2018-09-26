@@ -9,4 +9,9 @@ const bookSchema = mongoose.Schema({
   personalRating: {type: Number, max: 5, min: 1, require:true},
 });
 
+// bookSchema.pre('findById', function(next){
+//   this.populate('');
+//   next();
+// })
+
 export default mongoose.model('books', bookSchema);
