@@ -1,23 +1,12 @@
-![CF](http://i.imgur.com/7v5ASc8.png) 13: Single Resource Mongo and Express API
+#Single Resource Mongo and Express API
 ===
 
-## Submission Instructions
-Follow the instructions in the "Lab Submission Instructions" document in the course reference folder
-
-## Learning Objectives  
-* students will be able to work with the MongoDB database management system
-* students will understand the primary concepts of working with a NoSQL database management system
-* students will be able to create custom data models *(schemas)* through the use of mongoose.js
-* students will be able to use mongoose.js helper methods for interacting with their database persistence layer
-
-## Requirements
-
-#### Feature Tasks
-* create an HTTP Server using `express`
-* create a resource **model** of your choice that uses `mongoose.Schema` and `mongoose.model`
-* use the `body-parser` express middleware to parse the `req` body on `POST` and `PUT` requests
-* use the npm `debug` module to log the functions and methods that are being used in your application
-* use the express `Router` to create a route for doing **RESTFUL CRUD** operations against your _model_
+### Feature Tasks
+* creates an HTTP Server using `express`
+* creates a resource **model** that uses `mongoose.Schema` and `mongoose.model`
+* uses the `body-parser` express middleware to parse the `req` body on `POST` and `PUT` requests
+* uses the npm `debug` module to log the functions and methods that are being used in your application
+* uses the express `Router` to create a route for doing **RESTFUL CRUD** operations against your _model_
 
 ## Server Endpoints
 ### `/api/resource-name`
@@ -37,8 +26,8 @@ Follow the instructions in the "Lab Submission Instructions" document in the cou
     * **this should use `req.params`**
 
 ### Tests
-* create a test that will ensure that your API returns a status code of 404 for routes that have not been registered
-* create a series of tests to ensure that your `/api/resource-name` endpoint responds as described for each condition below:
+* Tests will ensure that the API returns a status code of 404 for routes that have not been registered
+* Tests ensure that `/api/resource-name` endpoint responds as described for each condition below:
   * `GET` - test 200, returns a resource with a valid body
  * `GET` - test 404, respond with 'not found' for valid requests made with an id that was not found
  * `PUT` - test 200, returns a resource with an updated body

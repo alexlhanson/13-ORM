@@ -11,6 +11,10 @@ require('babel-register')({
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 
+console.log(process.env.PORT);
+console.log(process.env.MONGODB_URI);
+
+
 //start express server
 const app = require('./src/app.js');
 app.listen(process.env.PORT, () => {
