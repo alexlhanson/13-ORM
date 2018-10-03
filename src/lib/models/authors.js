@@ -1,12 +1,14 @@
 'use strict';
 
 import mongoose from 'mongoose';
+import Books from './books.js';
+const Schema = mongoose.Schema;
 
-const authorSchema = mongoose.Schema({
+const authorSchema = Schema({
   name: {type: String, required: true},
   age: {type: Number, required: true},
   numberOfBooks: {type: Number, required: true},
-  booksList:[{type: mongoose.Schema.Types.ObjectId, refs: 'books'}], 
+  booksList:[{type: Schema.Types.ObjectId, refs: 'Books', required: true}], 
 });
 
 authorSchema.pre('findById', function(next){
@@ -14,4 +16,4 @@ authorSchema.pre('findById', function(next){
   next();
 });
 
-export default mongoose.model('authors', authorSchema);
+export default mongoose.model('Authors', authorSchema);
