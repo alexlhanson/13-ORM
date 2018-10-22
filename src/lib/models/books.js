@@ -27,7 +27,7 @@ bookSchema.pre('save', function (next) {
           { $addToSet: { booksList: bookId } }
         )
           .then(Promise.resolve())
-          .catch(err => Promise.reject(err))
+          .catch(err => Promise.reject(err));
       }
     })
     .then(next())
